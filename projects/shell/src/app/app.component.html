@@ -1,0 +1,24 @@
+<header>
+  <mat-toolbar color="primary">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <button mat-button routerLink="/">
+          Micro Frontend Demo
+        </button>
+        <button *ngFor="let remote of remotes" mat-button [routerLink]="remote.routePath">
+          {{remote.displayName}}
+        </button>
+      </div>
+
+      <div>
+        <button mat-icon-button routerLink="/checkout">
+          <mat-icon [matBadge]="cartItemCounter" [matBadgeHidden]="!cartItemCounter" matBadgeColor="warn" fontIcon="shopping_cart"></mat-icon>
+        </button>
+      </div>
+    </div>
+
+  </mat-toolbar>
+</header>
+<main class="container">
+  <router-outlet></router-outlet>
+</main>

@@ -1,0 +1,15 @@
+.box {
+  background-color: lightgray;
+}
+
+.banner {
+  height: 250px;
+margin-bottom: 48px;
+}
+
+.item {
+  height: 150px;
+  .box {
+    height: 100%;
+  }
+}

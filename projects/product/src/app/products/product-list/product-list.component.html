@@ -1,0 +1,28 @@
+<div class="row">
+  <aside class="col-3">
+  <div class="nav">
+
+  </div>
+  </aside>
+  <main class="col-9">
+    <div class="row">
+      <div class="col-3" *ngFor="let element of elements; let i = index">
+        <mat-card class="example-card" >
+          <div class="box" [routerLink]="i.toString()"></div>
+          <mat-card-content>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+            </p>
+          </mat-card-content>
+          <mat-card-actions class="d-flex justify-content-end">
+            <button mat-stroked-button color="primary" (click)="addToCart($event.target)">
+              <mat-icon>add_shopping_cart</mat-icon> Add item</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
